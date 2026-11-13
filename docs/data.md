@@ -21,3 +21,12 @@
 ## 业务字段语义
 
 component_a、component_b、component_c 为质量份额，其和在数值容差内为一。lot_size 为吨，detection_limit 是单组分检出限份额。period 为比较期，supplier 是供应方；零份额的原因需由分析配置说明。
+
+## 组成比较约定
+
+- 非负与闭合容差先验证：负值、全零批次、闭合误差超容差、lot_size 或 detection_limit 非正、批次跨供应方/比较期的记录按原因剔除并计数，不进入比较。
+- 零值成因由 `--zero-policy` 显式声明：`detection_limit` 视为检测限以下，按 `zero_fraction × detection_limit` 乘法替换（保持闭合与正值组分的相互比值），并对 `--zero-fractions` 列表做敏感性比较；`structural` 视为结构性不存在，对应组分从所有记录的子组成中剔除后再取 CLR；`reject` 遇零即失败。任何策略都不会统一加一个小数再取对数。
+- 距离为 CLR 表示下的 Aitchison 距离；置换检验以批次为单元，within_supplier 检验只在 supplier 内部打乱期间标签。
+- 每批等权（equal_batch）与 lot_size 物质量加权（mass）是两个独立统计总体，分块输出。
+- 分解恒等式：总位移 = 供应方内部配比 + 供应结构 + 不可分离（进入/退出供应方），残差范数随结果给出；没有共同供应方时 within/structure 为 null，全部变化列为不可分离。
+- 输出中的 null 表示缺少共同供应方或数据不足，不是零；所有结论均为质量监测线索，不是不合格判定。

@@ -1,0 +1,452 @@
+{
+  "analysis": "compositional_comparison",
+  "by_weighting": {
+    "equal_batch": {
+      "batch_units": 288,
+      "decomposition": {
+        "common_suppliers": [
+          "S0",
+          "S1",
+          "S2",
+          "S3"
+        ],
+        "common_weight_share_baseline": 1.0,
+        "common_weight_share_current": 1.0,
+        "entered_suppliers": [],
+        "exited_suppliers": [],
+        "non_separable": {
+          "clr": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "shift": 0.0
+        },
+        "non_separable_note": null,
+        "separable": true,
+        "supplier_structure": {
+          "clr": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "shift": 0.0
+        },
+        "within_supplier": {
+          "clr": [
+            0.03429998042709395,
+            -0.005483880081898946,
+            -0.028816100345195036
+          ],
+          "shift": 0.04513235244429461
+        }
+      },
+      "decomposition_residual_norm": 1.4304896245381992e-17,
+      "label": "每批等权",
+      "period_centroids": {
+        "0": {
+          "clr": [
+            -0.264300249382778,
+            -0.06824025950977443,
+            0.33254050889255243
+          ],
+          "geometric_mean_share": {
+            "component_a": 0.2479561435659487,
+            "component_b": 0.3016634161981425,
+            "component_c": 0.45038044023590873
+          }
+        },
+        "1": {
+          "clr": [
+            -0.23000026895568407,
+            -0.07372413959167337,
+            0.3037244085473574
+          ],
+          "geometric_mean_share": {
+            "component_a": 0.25810307653311515,
+            "component_b": 0.3017609525067247,
+            "component_c": 0.44013597096016016
+          }
+        }
+      },
+      "ratio_changes": [
+        {
+          "fold_change": 1.0405858381910718,
+          "log2_fold_change": 0.05739597826374257,
+          "log2_ratio_baseline": -0.2828547751065226,
+          "log2_ratio_current": -0.22545879684278006,
+          "pair": "component_a/component_b"
+        },
+        {
+          "fold_change": 1.0651504755450727,
+          "log2_fold_change": 0.09105725673052878,
+          "log2_ratio_baseline": -0.8610592021642279,
+          "log2_ratio_current": -0.7700019454336992,
+          "pair": "component_a/component_c"
+        },
+        {
+          "fold_change": 1.0236065459017811,
+          "log2_fold_change": 0.03366127846678646,
+          "log2_ratio_baseline": -0.5782044270577054,
+          "log2_ratio_current": -0.5445431485909189,
+          "pair": "component_b/component_c"
+        }
+      ],
+      "rows": 288,
+      "supplier_details": [
+        {
+          "batch_units_baseline": 36,
+          "batch_units_current": 36,
+          "distance": 0.045596221830183664,
+          "permutation_p_value": 0.319,
+          "status": "common",
+          "supplier": "S0",
+          "weight_share_baseline": 0.25,
+          "weight_share_current": 0.25
+        },
+        {
+          "batch_units_baseline": 36,
+          "batch_units_current": 36,
+          "distance": 0.04402285449245862,
+          "permutation_p_value": 0.334,
+          "status": "common",
+          "supplier": "S1",
+          "weight_share_baseline": 0.25,
+          "weight_share_current": 0.25
+        },
+        {
+          "batch_units_baseline": 36,
+          "batch_units_current": 36,
+          "distance": 0.045595645557286055,
+          "permutation_p_value": 0.293,
+          "status": "common",
+          "supplier": "S2",
+          "weight_share_baseline": 0.25,
+          "weight_share_current": 0.25
+        },
+        {
+          "batch_units_baseline": 36,
+          "batch_units_current": 36,
+          "distance": 0.04562851920689662,
+          "permutation_p_value": 0.307,
+          "status": "common",
+          "supplier": "S3",
+          "weight_share_baseline": 0.25,
+          "weight_share_current": 0.25
+        }
+      ],
+      "tests": {
+        "total": {
+          "alpha": 0.05,
+          "confounded_with_supplier_structure": false,
+          "decision": "shift_indicated",
+          "name": "两期总体分布检验",
+          "p_value": 0.043,
+          "permutations": 999,
+          "reason": null,
+          "statistic": {
+            "name": "aitchison_distance",
+            "value": 0.045132352444294616
+          },
+          "valid_permutations": 999
+        },
+        "within_supplier": {
+          "alpha": 0.05,
+          "confounded_with_supplier_structure": false,
+          "decision": "shift_indicated",
+          "name": "供应方内部配比检验",
+          "p_value": 0.036,
+          "permutations": 999,
+          "reason": null,
+          "statistic": {
+            "name": "weighted_within_supplier_shift",
+            "value": 0.04513235244429461
+          },
+          "valid_permutations": 999
+        }
+      },
+      "total": {
+        "clr": [
+          0.03429998042709395,
+          -0.0054838800818989425,
+          -0.02881610034519505
+        ],
+        "shift": 0.045132352444294616
+      }
+    },
+    "mass": {
+      "batch_units": 288,
+      "decomposition": {
+        "common_suppliers": [
+          "S0",
+          "S1",
+          "S2",
+          "S3"
+        ],
+        "common_weight_share_baseline": 1.0,
+        "common_weight_share_current": 1.0,
+        "entered_suppliers": [],
+        "exited_suppliers": [],
+        "non_separable": {
+          "clr": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "shift": 0.0
+        },
+        "non_separable_note": null,
+        "separable": true,
+        "supplier_structure": {
+          "clr": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "shift": 0.0
+        },
+        "within_supplier": {
+          "clr": [
+            0.034105429771260756,
+            -0.004970713401105352,
+            -0.02913471637015544
+          ],
+          "shift": 0.04513003467279558
+        }
+      },
+      "decomposition_residual_norm": 3.179800655392251e-17,
+      "label": "lot_size 物质量加权",
+      "period_centroids": {
+        "0": {
+          "clr": [
+            -0.2588476504260339,
+            -0.06995900301900168,
+            0.32880665344503557
+          ],
+          "geometric_mean_share": {
+            "component_a": 0.24952165405207338,
+            "component_b": 0.30139881321815504,
+            "component_c": 0.44907953272977164
+          }
+        },
+        "1": {
+          "clr": [
+            -0.22474222065477314,
+            -0.07492971642010703,
+            0.29967193707488016
+          ],
+          "geometric_mean_share": {
+            "component_a": 0.25966706598059247,
+            "component_b": 0.30163352865348775,
+            "component_c": 0.43869940536591984
+          }
+        }
+      },
+      "ratio_changes": [
+        {
+          "fold_change": 1.039849658087574,
+          "log2_fold_change": 0.056374957971840084,
+          "log2_ratio_baseline": -0.27250871489434947,
+          "log2_ratio_current": -0.21613375692250938,
+          "pair": "component_a/component_b"
+        },
+        {
+          "fold_change": 1.0652826320298492,
+          "log2_fold_change": 0.09123624522331464,
+          "log2_ratio_baseline": -0.847805949951848,
+          "log2_ratio_current": -0.7565697047285334,
+          "pair": "component_a/component_c"
+        },
+        {
+          "fold_change": 1.0244583183198328,
+          "log2_fold_change": 0.03486128725147475,
+          "log2_ratio_baseline": -0.5752972350574986,
+          "log2_ratio_current": -0.5404359478060239,
+          "pair": "component_b/component_c"
+        }
+      ],
+      "rows": 288,
+      "supplier_details": [
+        {
+          "batch_units_baseline": 36,
+          "batch_units_current": 36,
+          "distance": 0.04514614471098413,
+          "permutation_p_value": 0.323,
+          "status": "common",
+          "supplier": "S0",
+          "weight_share_baseline": 0.23255813953488372,
+          "weight_share_current": 0.23255813953488372
+        },
+        {
+          "batch_units_baseline": 36,
+          "batch_units_current": 36,
+          "distance": 0.04430204630118331,
+          "permutation_p_value": 0.397,
+          "status": "common",
+          "supplier": "S1",
+          "weight_share_baseline": 0.2441860465116279,
+          "weight_share_current": 0.2441860465116279
+        },
+        {
+          "batch_units_baseline": 36,
+          "batch_units_current": 36,
+          "distance": 0.04618420629063318,
+          "permutation_p_value": 0.268,
+          "status": "common",
+          "supplier": "S2",
+          "weight_share_baseline": 0.2558139534883721,
+          "weight_share_current": 0.2558139534883721
+        },
+        {
+          "batch_units_baseline": 36,
+          "batch_units_current": 36,
+          "distance": 0.045364079204665786,
+          "permutation_p_value": 0.323,
+          "status": "common",
+          "supplier": "S3",
+          "weight_share_baseline": 0.26744186046511625,
+          "weight_share_current": 0.26744186046511625
+        }
+      ],
+      "tests": {
+        "total": {
+          "alpha": 0.05,
+          "confounded_with_supplier_structure": false,
+          "decision": "shift_indicated",
+          "name": "两期总体分布检验",
+          "p_value": 0.041,
+          "permutations": 999,
+          "reason": null,
+          "statistic": {
+            "name": "aitchison_distance",
+            "value": 0.04513003467279557
+          },
+          "valid_permutations": 999
+        },
+        "within_supplier": {
+          "alpha": 0.05,
+          "confounded_with_supplier_structure": false,
+          "decision": "shift_indicated",
+          "name": "供应方内部配比检验",
+          "p_value": 0.041,
+          "permutations": 999,
+          "reason": null,
+          "statistic": {
+            "name": "weighted_within_supplier_shift",
+            "value": 0.04513003467279558
+          },
+          "valid_permutations": 999
+        }
+      },
+      "total": {
+        "clr": [
+          0.03410542977126077,
+          -0.004970713401105345,
+          -0.02913471637015541
+        ],
+        "shift": 0.04513003467279557
+      }
+    }
+  },
+  "composition": {
+    "components": [
+      "component_a",
+      "component_b",
+      "component_c"
+    ],
+    "excluded_components": [],
+    "imputed_zeros": 0,
+    "used_components": [
+      "component_a",
+      "component_b",
+      "component_c"
+    ],
+    "zero_fraction": 0.5,
+    "zero_interpretation": "零值按检测限以下处理，替换为 zero_fraction × detection_limit 并做乘法替换保持闭合",
+    "zero_policy": "detection_limit"
+  },
+  "config": {
+    "alpha": 0.05,
+    "baseline_period": null,
+    "closure_tolerance": 1e-06,
+    "current_period": null,
+    "permutations": 999,
+    "seed": 20260101,
+    "sensitivity_fractions": [
+      0.1,
+      0.25,
+      0.5,
+      0.65,
+      1.0
+    ],
+    "weighting_schemes": [
+      {
+        "key": "equal_batch",
+        "label": "每批等权"
+      },
+      {
+        "key": "mass",
+        "label": "lot_size 物质量加权"
+      }
+    ],
+    "zero_fraction": 0.5,
+    "zero_policy": "detection_limit"
+  },
+  "input_fingerprint": "022defc1736db38edbfc2082292c14d2fbeb83b9f90a4fc459a0b5f7d2f91065",
+  "notes": [
+    "距离为 CLR 表示下的 Aitchison 距离；CLR 坐标正负只表示相对几何均值的高低，不能直接解释为某种材料绝对增加。",
+    "组分份额受闭合约束，一项上升必然牵动其他项；解释以组分比变化为准。",
+    "每批等权与 lot_size 物质量加权分别计算，未合并为同一统计总体。",
+    "置换检验以批次为单元重采样，保留 supplier 内批次结构。",
+    "零值成因（检测限以下或结构性不存在）无法从数值本身区分，由 zero_policy 显式声明；detection_limit 策略按声明比例替换并做敏感性比较，structural 策略将零组分剔除后分析子组成。",
+    "null 表示缺少共同供应方或数据不足，不是零。",
+    "本结果为质量监测线索，不是不合格判定。"
+  ],
+  "periods": {
+    "baseline": 0,
+    "current": 1,
+    "observed": [
+      0,
+      1
+    ]
+  },
+  "product": "compositional-shift",
+  "reason": null,
+  "reason_text": null,
+  "rows": 288,
+  "schema_version": 1,
+  "status": "ok",
+  "unit": "质量份额",
+  "validation": {
+    "all_zero_rows": 0,
+    "closure_tolerance": 1e-06,
+    "excluded_by_reason": {},
+    "invalid_batches": [],
+    "max_closure_error": 0.0,
+    "max_closure_error_used": 0.0,
+    "nonnegative_violations": 0,
+    "positive_below_detection_limit": {
+      "component_a": 0,
+      "component_b": 0,
+      "component_c": 0
+    },
+    "rows_excluded": 0,
+    "rows_in_comparison": 288,
+    "rows_outside_comparison": 0,
+    "rows_screened": 288,
+    "rows_total": 288,
+    "rows_used": 288,
+    "zero_counts": {
+      "component_a": 0,
+      "component_b": 0,
+      "component_c": 0
+    }
+  },
+  "zero_sensitivity": {
+    "applicable": false,
+    "entries": [],
+    "fractions": [],
+    "reason": "no_zero_values",
+    "summary": {}
+  }
+}

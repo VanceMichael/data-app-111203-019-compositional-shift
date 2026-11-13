@@ -3,5 +3,6 @@ REQUIRED = ['observation_id', 'batch', 'supplier', 'period', 'component_a', 'com
 ENTITY = 'batch'
 GROUP = 'supplier'
 MEASURE = 'component_a'
+COMPONENTS = ('component_a', 'component_b', 'component_c')
 PRODUCT = 'compositional-shift'
 UNIT = '质量份额'
